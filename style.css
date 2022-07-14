@@ -7,14 +7,18 @@ body {
 }
 
 .left {
-    width: 20vw;
+    width: 16vw;
+    background-color: #1992D4;
+    color: white;
+    font-weight: bold;
 }
 
 .left img {
     display: inline-block;
     vertical-align: middle;
     padding-bottom: 5px;
-    margin-right: 18px
+    margin-right: 18px;
+    filter: invert(100%);
 }
 
 .container {
@@ -24,12 +28,16 @@ body {
 }
 
 .dashboard-title {
-    
+    font-size: 28px;
 }
 
 .dashboard-title > img {
     width: 60px;
     height: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 13px;
+    padding-bottom: 15px;
 }
 
 nav > ul {
@@ -42,7 +50,7 @@ nav > ul {
     height: 30px;
 }
 
-
-a:visited {
-    color: LinkText;
+a {
+    text-decoration: none;
+    color: white;
 }
