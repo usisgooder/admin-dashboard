@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
 :root {
     --header-height: 150px;
+    --font: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: var(--font);
     font-weight: bold;
     min-height: 100vh;
     display: flex;
@@ -16,6 +19,25 @@ img {
     vertical-align: middle;
     padding-bottom: 5px;
     margin-right: 18px;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    padding: 8px 25px;
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 1.2em;
+    font-weight: bold;
+    min-width: 120px;
+    height: 40px;
+    background-color: #1992D4;
+    color: white;
+    border-radius: 30px;
+    border: none;
+
 }
 
 .left {
@@ -49,7 +71,6 @@ img {
 }
 
 nav > ul {
-    list-style: none;
     font-size: 20px;
 }
 
@@ -73,6 +94,7 @@ nav > ul {
     height: var(--header-height);
     flex-shrink: 0;
     margin-left: 2vw;
+    padding-bottom: 10px;
 }
 
 .upper {
@@ -89,6 +111,8 @@ nav > ul {
 
 #search {
     width: 80%;
+    padding: 5px 10px;
+    font-size: 1.2rem;
     height: 2rem;
     border-radius: 15px;
     background-color: #E2E8F0;
@@ -96,8 +120,7 @@ nav > ul {
 }
 
 #search:focus {
-    padding: 5px 10px;
-    outline: none;
+    outline:1px solid black;
     border: none;
 }
 
@@ -114,9 +137,42 @@ nav > ul {
 }
 
 .profile-pic {
+    border-radius: 50%;
+}
+
+.personal > .profile-pic {
     width: 45px;
     height: 45px;
-    border-radius: 50%;
+}
+
+.lower {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lower .profile-pic {
+    width: 60px;
+    height: 60px;
+}
+
+.greeting {
+    flex: 1;
+    vertical-align: middle;
+}
+
+.greeting .name {
+    font-size: 24px;
+}
+
+.actions {
+    justify-content: right;
+    margin-right: 6vw;
+}
+
+.actions li {
+    display: inline;
+    padding: 10px 12px;
 }
 
 .content {
