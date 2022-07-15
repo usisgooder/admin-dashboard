@@ -212,11 +212,67 @@ button {
     border-radius: 1em;
     max-width: 500px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+    overflow: hidden;
 }
 
 .project.card {
+    padding: 0 0;
     width: 350px;
     height:200px;
+    display: flex;
+}
+
+.project-display {
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.subtitle {
+    color: grey;
+    margin-top: 0.3em;
+    font-size: 0.8em;
+}
+
+.status {
+    height: inherit;
+    width: 8px;
+}
+
+.progress {
+    background-color: orange;
+}
+
+.complete {
+    background-color: green;
+}
+
+.stopped {
+    background-color: red;
+}
+
+.project-info {
+    margin-top: 0.5em;
+    flex: 1;
+}
+
+.project-footer {
+    text-align: right;
+    margin-top: auto;
+}
+
+.project-footer > a:last-child > img {
+    margin-right: 0;
+}
+
+.text-cutoff {
+    /* Add -webkit-line-clamp property for max lines*/
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;         /*prevent text from being shown outside the border */
+    text-overflow: ellipsis;  /*cut off text with an ellipsis*/
 }
 
 #announcement-title {
@@ -242,15 +298,8 @@ button {
     flex-shrink: 1;
 }
 
-.announcement-subtitle {
-    margin-top: 0.3em;
+.announcement-info {
     font-size: small;
-    color: grey;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;         /*prevent text from being shown outside the border */
-    text-overflow: ellipsis;  /*cut off text with an ellipsis*/
 }
 
 .announcement.card > * {
@@ -280,10 +329,4 @@ button {
 .trending-display {
     display: flex;
     flex-direction: row;
-}
-
-.trending-project {
-    font-size: 0.8em;
-    color: gray;
-    margin-top: 0.3em;
 }
