@@ -200,7 +200,8 @@ button {
 .projects {
     grid-area: projects;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 350px);
+    margin: 1.2em 1.3em;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
     grid-template-rows: repeat(auto-fill, 200px);
     gap: 15px;
 }
@@ -217,7 +218,8 @@ button {
 
 .project.card {
     padding: 0 0;
-    width: 350px;
+    /* width: 350px; */
+    max-width: 420px;
     height:200px;
     display: flex;
 }
